@@ -47,8 +47,8 @@ image_file = st.file_uploader("Upload Images", type=["png","jpg","jpeg"])
 #if image_file is not None:
 if image_file is not None:
     mask = prediction(image_file)
-    st.image(load_image(image_file))
+    st.image(load_image(image_file), width=256)
     # file_details = {"filename":image_file.name, "filetype":image_file.type,"filesize":image_file.size}
-    st.image(mask)
+    st.image(mask, width=256)
 
 #st.image(json_data,width=250)
